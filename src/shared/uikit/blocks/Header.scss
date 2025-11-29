@@ -1,0 +1,10 @@
+@use '../theme' as *;
+@use '../core' as *;
+
+.header {
+  /* align-items: center; */
+  /* justify-content: center; */
+  min-height: rx(20);
+  min-width: 100%;
+  @include flex($gap: rx(4), $direction: row);
+}
