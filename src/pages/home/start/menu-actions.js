@@ -1,0 +1,51 @@
+// import { GAME_MODES } from '@/features/game/constants';
+
+export const GAME_MODES = {
+  CLASSIC: 'classic',
+  RANDOM: 'random',
+  CHAOTIC: 'chaotic',
+  ZEN: 'zen',
+};
+
+export const MENU_ACTIONS = {
+  // TITLE: 'Pair Em Up',
+  // TIP: 'Select game mode',
+  STATS: { label: 'Results', action: { type: 'stats' } },
+
+  CONTINUE: {
+    label: 'Continue',
+    action: { type: 'continue', payload: null },
+  },
+
+  SAVE: {
+    label: 'Save',
+    action: { type: 'save' },
+  },
+
+  SETTINGS: {
+    label: 'Settings',
+    action: { type: 'settings' },
+  },
+
+  BACK_TO_MENU: {
+    label: 'Back',
+    title: 'Go back',
+    action: { type: 'back-to-menu' },
+  },
+
+  MODES: [
+    {
+      label: 'Classic',
+      action: { type: 'mode', payload: GAME_MODES.CLASSIC },
+    },
+    {
+      label: 'Random',
+      action: { type: 'mode', payload: GAME_MODES.RANDOM },
+    },
+    {
+      label: 'Chaotic',
+      action: { type: 'mode', payload: GAME_MODES.CHAOTIC },
+    },
+    // { label: 'Zen', action: { type: 'mode', payload: { mode: GAME_MODES.ZEN } } },
+  ],
+};
