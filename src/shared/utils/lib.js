@@ -8,3 +8,21 @@ export const getScrollbarWidth = () =>
 export function isValidKeybind(code) {
   return /^[A-Z]$/.test(code);
 }
+
+export function shuffleArray(array) {
+  const arr = [...array];
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  return arr;
+}
+
+export function formatTime(seconds) {
+  const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+  const sec = String(seconds % 60).padStart(2, '0');
+
+  return `${min}:${sec}`;
+}
